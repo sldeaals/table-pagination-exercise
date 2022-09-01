@@ -11,7 +11,7 @@
     "react-scripts": "5.0.1",
     "react-select": "5.4.0",
     "react-table": "latest",
-    "web-vitals": "^2.1.0"
+    "styled-components": "5.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
