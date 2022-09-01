@@ -11,19 +11,13 @@ const TableFooter = ({
   pageOptions
 }) => (
   <>
-    {canPreviousPage && (
-      <button style={styles.pageButton} onClick={() => previousPage()}>
-        {"<"}
-      </button>
-    )}
-    {canNextPage && (
-      <button style={styles.pageButton} onClick={() => nextPage()}>
-        {">"}
-      </button>
-    )}
-    <>
-      <span>{`Page ${pageIndex + 1} of ${pageOptions.length}`}</span>
-    </>
+    <button style={styles.pageButton} onClick={() => previousPage()} disabled={!canPreviousPage}>
+      {"<"}
+    </button>
+    <span>{`Page ${pageIndex + 1} of ${pageOptions.length}`}</span>
+    <button style={styles.pageButton} onClick={() => nextPage()} disabled={!canNextPage}>
+      {">"}
+    </button>
   </>
 );
 
