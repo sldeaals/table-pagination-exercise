@@ -56,23 +56,31 @@ Th.propTypes = {
 
 export const styles = {
     table: {
-        width: "100%"
+        backgroundColor: "#fff",
+        color: "rgba(0, 0, 0, 0.87)",
+        transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+        borderRadius: "4px",
+        boxShadow: "0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)",
+        width: "100%",
+        marginBottom: "16px"
     },
     tr: {
         backgroundColor: "#EFEFEF"
     },
     th: {
         textAlign: "left",
-        padding: "8px"
+        padding: "16px",
+        borderBottom: "1px solid rgba(224, 224, 224, 1)"
     },
     td: {
         textAlign: "left",
-        padding: "8px"
+        padding: "16px",
+        borderBottom: "1px solid rgba(224, 224, 224, 1)"
     },
     tableFooter: {
-        padding: "8px 0px",
+        padding: "0px 8px",
         display: "flex",
-        gap: "8px",
+        gap: "16px",
         alignItems: "center"
     }
 };
