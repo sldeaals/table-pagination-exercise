@@ -78,6 +78,11 @@ const Table = memo((props) => {
         <tbody>{rows}</tbody>
       </table>
       <div style={S.styles.tableFooter}>
+        <Dropdown
+          setPageSize={setPageSize}
+          pageSize={pageSize}
+          gotoPage={gotoPage}
+        />
         <TableFooter
           previousPage={previousPage}
           canPreviousPage={canPreviousPage}
@@ -85,13 +90,7 @@ const Table = memo((props) => {
           canNextPage={canNextPage}
           pageIndex={pageIndex}
           pageOptions={pageOptions}
-          setPageSize={setPageSize}
           pageSize={pageSize}
-        />
-        <Dropdown
-          setPageSize={setPageSize}
-          pageSize={pageSize}
-          gotoPage={gotoPage}
         />
       </div>
     </>

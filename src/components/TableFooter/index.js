@@ -1,25 +1,26 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import styles from "./style";
 
-const TableFooter = ({
+const TableFooter = memo(({
   previousPage,
   canPreviousPage,
   nextPage,
   canNextPage,
   pageIndex,
-  pageOptions
+  pageOptions,
+  pageSize,
 }) => (
   <>
+    <span>{`${pageIndex + 1} - ${pageSize} of ${pageOptions.length}`}</span>
     <button style={styles.pageButton} onClick={() => previousPage()} disabled={!canPreviousPage}>
       {"<"}
     </button>
-    <span>{`Page ${pageIndex + 1} of ${pageOptions.length}`}</span>
     <button style={styles.pageButton} onClick={() => nextPage()} disabled={!canNextPage}>
       {">"}
     </button>
   </>
-);
+));
 
 TableFooter.propTypes = {
   previousPage: PropTypes.func,
@@ -27,7 +28,8 @@ TableFooter.propTypes = {
   nextPage: PropTypes.func,
   canNextPage: PropTypes.bool,
   pageIndex: PropTypes.number,
-  pageOptions: PropTypes.array
+  pageOptions: PropTypes.array,
+  pageSize: PropTypes.number
 };
 
 export default TableFooter;

@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Test</h1>
+      <h1>Table With Pagination</h1>
       {data?.length && <Table data={data} />}
     </div>
   );
